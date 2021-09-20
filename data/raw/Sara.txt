@@ -1,3 +1,6 @@
+# uid	record id
+# tag_id	transmitter ID number
+# utc	universal time coordinate
 # lc	location class, see http://www.nacls.com/html/argos/manual/html/chap2/chap2_3.htm#2.3.5
 # iq	quality index, see http://www.nacls.com/html/argos/manual/html/chap4/chap4_4_9.htm#4.4.9.3 
 # lat1	solution1 latitude
