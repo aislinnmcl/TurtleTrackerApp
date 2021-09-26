@@ -20,6 +20,10 @@ line_list = file_object.readlines()
 #Close the file
 file_object.close()
 
+#Create two empty dictionary objects
+date_dict = {}
+coord_dict = {}
+
 #Iterate through all lines in the linelist
 for lineString in line_list:
     if lineString[0] in ("#","u"):
@@ -36,3 +40,10 @@ for lineString in line_list:
     
     #Print the location of sara
     print(f"Record {record_id} indicates Sara was seen at lat:{obs_lat}, lon:{obs_lon} on {obs_date}")
+    
+    #Only add values to dictionaries if lc = 1, 2 or 3
+    if obs_lc not in ["1", "2", "3"]:
+        continue
+    #Add values to dictionaries
+    date_dict[record_id] = obs_date
+    coord_dict[record_id] = obs_lat, obs_lon
